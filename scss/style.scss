@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@mixin resp ($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+
+@font-face {
+  font-family: "Digital";
+  src: url("../fonts/DS-DIGI.TTF");
+}
+
+
+span, p {
+  color: white;
+}
+
+
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: #000000fc;
+
+  .container {
+
+
+    padding-top: 105px;
+
+    width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+    // height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    .timer {
+      display: flex;
+      justify-content: space-between;
+      max-width: 330px;
+      margin-left: auto;
+      margin-right: auto;
+      @include resp(425px) {
+        max-width: 400px;
+      }
+      @include resp (600px) {
+        max-width: 535px;
+      }
+      @include resp (1024px) {
+        max-width: 700px;
+      }
+      @include resp (1200px) {
+        max-width: 740px;
+      }
+      // column-gap: 75px;
+
+      // timer item 
+      .timer__item {
+        .timer__digit {
+          font-family: "Digital", Sans-serif;
+          // font-size: 130px;
+          font-size: 64px;
+          @include resp (425px) {
+            font-size: 90px;
+          }
+          @include resp (600px) {
+            font-size: 100px;
+          }
+          @include resp (1024px) {
+            font-size: 115px;
+          }
+          @include resp (1200px) {
+            font-size: 125px;
+          }
+          @include resp (1400px) {
+            font-size: 136px;
+          }
+        }
+        .title {
+          font-family: Helvetica, sans-serif;
+          font-weight: 100;
+          text-transform: uppercase;
+          text-align: center;
+          letter-spacing: 2px;
+          font-size: 10px;
+          @include resp (425px) {
+            font-size: 13px;
+            // font-size: 22px;
+          }
+          @include resp (600px) {
+            font-size: 16px;
+          }
+          @include resp (1024px) {
+            font-size: 18px;
+          }
+          @include resp (1200px) {
+            font-size: 20px;
+          }
+          @include resp (1400px) {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}
