@@ -52,7 +52,14 @@ section .container .timer {
     max-width: 740px;
   }
 }
+section .container .timer .timer__item {
+  flex-basis: 25%;
+}
+section .container .timer .timer__item .counter {
+  text-align: center;
+}
 section .container .timer .timer__item .timer__digit {
+  display: inline-block;
   font-family: "Digital", Sans-serif;
   font-size: 64px;
 }

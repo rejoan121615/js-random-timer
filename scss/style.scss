@@ -62,7 +62,12 @@ section {
 
       // timer item 
       .timer__item {
+        flex-basis: (100%/4);
+        .counter {
+          text-align: center;
+        }
         .timer__digit {
+          display: inline-block;
           font-family: "Digital", Sans-serif;
           // font-size: 130px;
           font-size: 64px;
